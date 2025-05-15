@@ -27,7 +27,7 @@
               bundler-cache: true # 会自动运行 bundle install 并缓存 gems
 
           - name: Build Jekyll site 🛠️
-            run: bundle exec jyll build
+            run: bundle exec jekyll build
             env:
               JEKYLL_ENV: production
 
