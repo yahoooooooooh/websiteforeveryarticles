@@ -1,0 +1,143 @@
+/* css/style.css */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 270px; /* 稍微加宽一点导航栏以便内容展示更舒适 */
+    background-color: #333;
+    color: #fff;
+    padding: 15px; /* 调整内边距 */
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+    font-size: 1.6em; /* 稍微增大标题字号 */
+    border-bottom: 1px solid #555;
+    padding-bottom: 15px; /* 增加标题下的内边距 */
+    margin-bottom: 15px; /* 增加标题和导航列表之间的间距 */
+}
+
+.sidebar ul#navigation { /* 直接针对导航主列表 */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* --- 修改开始 --- */
+
+/* 1. 针对一级导航项 (主题 LI) */
+.sidebar ul#navigation > li {
+    margin-bottom: 15px; /* 增加每个主题模块底部的外边距，拉开主题间的距离 */
+}
+
+/* 2. 针对主题标题 (SPAN) */
+.sidebar span.theme-title {
+    cursor: pointer;
+    font-weight: bold;
+    display: block;
+    padding: 10px 8px; /* 增加主题标题的上下内边距 */
+    background-color: #444; /* 给主题一个轻微的背景色以区分 */
+    border-radius: 4px;
+    margin-bottom: 8px; /* 在主题标题和其下的文章列表之间增加间距 */
+    transition: background-color 0.2s; /* 平滑过渡效果 */
+}
+
+.sidebar span.theme-title:hover {
+    background-color: #555;
+}
+
+/* 3. 针对二级导航列表 (文章 UL) */
+.sidebar ul.article-list { /* 使用 JS 中添加的 .article-list 类 */
+    list-style-type: none;
+    padding-left: 20px; /* 文章列表的缩进 */
+    margin: 0; /* 重置外边距 */
+    /* display: none; (由JS控制，通过 .open 类切换) */
+}
+
+.sidebar ul.article-list.open { /* 当展开时 */
+    display: block;
+}
+.sidebar ul.article-list { /* 默认隐藏，由 JS 控制 */
+    display: none;
+}
+
+
+/* 4. 针对二级导航项 (文章 LI 和 A) */
+.sidebar ul.article-list li {
+    padding: 0; /* 重置文章 LI 的内边距，具体由 A 标签控制 */
+}
+
+.sidebar ul.article-list li a {
+    color: #ddd; /* 文章链接颜色调浅一些 */
+    text-decoration: none;
+    display: block;
+    padding: 8px 10px; /* 调整文章链接的内边距 */
+    border-radius: 3px;
+    font-size: 0.9em; /* 文章链接字号略小 */
+    transition: background-color 0.2s, color 0.2s; /* 平滑过渡 */
+}
+
+.sidebar ul.article-list li a:hover,
+.sidebar ul.article-list li a.active { /* 文章链接的悬停和激活状态 */
+    background-color: #5a5a5a;
+    color: #fff;
+}
+
+/* --- 修改结束 --- */
+
+.content {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    overflow-y: auto;
+}
+
+/* ... (之前 #article-content 相关的样式保持不变) ... */
+#article-content h1,
+#article-content h2,
+#article-content h3 {
+    color: #333;
+}
+
+#article-content p {
+    line-height: 1.6;
+}
+
+#article-content pre {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+#article-content code {
+    background-color: #f0f0f0;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+#article-content blockquote {
+    border-left: 4px solid #ddd;
+    padding-left: 10px;
+    color: #666;
+    margin-left: 0;
+}
+
+#article-content ul,
+#article-content ol {
+    padding-left: 20px;
+}

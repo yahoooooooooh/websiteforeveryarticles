@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的文章网站</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 引入 Marked.js -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- 或者本地: <script src="js/marked.min.js"></script> -->
+</head>
+<body>
+
+    <div class="container">
+        <div class="sidebar">
+            <h2>文章主题</h2>
+            <ul id="navigation">
+                <li>加载中...</li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <!-- 初始欢迎内容，加载文章后会隐藏 -->
+            <div id="initial-content">
+                <h1>欢迎来到我的文章网站</h1>
+                <p>请在左侧导航栏选择一个主题和文章来阅读。</p>
+            </div>
+            <!-- 文章内容将由 JavaScript 加载和显示 -->
+            <div id="article-content">
+                <!-- 文章内容将在这里显示 -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
