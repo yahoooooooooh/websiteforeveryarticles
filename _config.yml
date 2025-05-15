@@ -65,3 +65,7 @@ collections:
   # yingwu:
   #   output: true
   #   permalink: /yingwu/:name/
+
+header_pages: # <--- 添加或修改这个部分
+  - about.markdown # 保留默认的 About 页面链接 (如果需要)
+  - gaomipuhuinianhua.md # 添加指向您的扑灰年画列表页面的链接
