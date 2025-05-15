@@ -4,3 +4,9 @@
 
 layout: home
 ---
+
+{{% 这是您的主页内容 %}}
+
+<p>
+  <a href="{{ '/gaomipuhuinianhua/' | relative_url }}">点击这里查看高密扑灰年画列表</a>
+</p>
